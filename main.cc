@@ -9,7 +9,12 @@ using namespace std;
 #include <cstring>
 
 #include "node.h"
+#include "node_test.h"
 #include "typing_machine.h"
+#include "typing_machine_test.h"
+#include "getch.h"
+
+
 #include "getch.h"
 
 const char full_board[5][34] = {
@@ -157,6 +162,7 @@ void TestTypingMachine() {
 int main() {
   puts("1: Test Node.");
   puts("2: Test Typing Machine.");
+  puts("3: Node Test.");
   while (true) {
     int user_key = GetKeyInput();
     if (user_key == '1') {
@@ -167,6 +173,11 @@ int main() {
       TestTypingMachine();
       return 0;
     }
+	if (user_key == '3'){
+		NodeTest();
+		TypingMachineTest();
+		return 0;
+	}
   }
 }
 
