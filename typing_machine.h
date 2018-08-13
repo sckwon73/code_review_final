@@ -17,6 +17,12 @@ class TypingMachine {
   bool TypeKey(char key);
   bool EraseKey();
   std::string Print(char separator);
+
+private:
+  Node *_cur;
+  Node *_start;
+  int _cnt;
+
 };
 
 #endif  // TYPING_MACHINE_H_

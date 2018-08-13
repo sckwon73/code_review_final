@@ -1,4 +1,9 @@
 // Copyright 2018 Hanpil Kang
+//FIXME : debug
+/*
+#include <iostream>
+using namespace std;
+*/
 
 #include <cstdio>
 #include <cstring>
@@ -129,11 +134,19 @@ void TestTypingMachine() {
         tape.EndKey();
         break;
       }
-      case KEY_DEL: {
+      case KEY_DEL2: {
         tape.EraseKey();
         break;
       }
       default: {
+
+		  //FIXME : debug for deletion do nothing
+		  /*
+		  std::string input;
+		  input += user_key;
+		  puts(input.c_str());
+		  std::cout << user_key << endl;*/
+
         tape.TypeKey(user_key);
         break;
       }
